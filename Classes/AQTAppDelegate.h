@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AQTRecorder.h"
 
 @interface AQTAppDelegate : UIResponder <UIApplicationDelegate> {
+    AQTRecorder * _recorder;
 }
 @property (strong, nonatomic) UIWindow * window;
 @end

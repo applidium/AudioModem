@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C3D270316A0284C00CEC756 /* AQTRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D270216A0284C00CEC756 /* AQTRecorder.m */; };
+		3C3D270616A0444200CEC756 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3D270516A0444200CEC756 /* AudioToolbox.framework */; };
 		7A0EC6541535D8ED00E5F54A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6531535D8ED00E5F54A /* UIKit.framework */; };
 		7A0EC6561535D8ED00E5F54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6551535D8ED00E5F54A /* Foundation.framework */; };
 		7A0EC6581535D8ED00E5F54A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6571535D8ED00E5F54A /* CoreGraphics.framework */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C3D270116A0284C00CEC756 /* AQTRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTRecorder.h; sourceTree = "<group>"; };
+		3C3D270216A0284C00CEC756 /* AQTRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTRecorder.m; sourceTree = "<group>"; };
+		3C3D270516A0444200CEC756 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6F3B917C1589E79C00806754 /* ADSharedMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSharedMacros.h; path = Modules/ADSharedMacros.h; sourceTree = SOURCE_ROOT; };
 		7A0EC64F1535D8ED00E5F54A /* AudioQueueTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioQueueTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0EC6531535D8ED00E5F54A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3D270616A0444200CEC756 /* AudioToolbox.framework in Frameworks */,
 				7A0EC6541535D8ED00E5F54A /* UIKit.framework in Frameworks */,
 				7A0EC6561535D8ED00E5F54A /* Foundation.framework in Frameworks */,
 				7A0EC6581535D8ED00E5F54A /* CoreGraphics.framework in Frameworks */,
@@ -70,6 +76,7 @@
 		7A0EC6521535D8ED00E5F54A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C3D270516A0444200CEC756 /* AudioToolbox.framework */,
 				7A0EC6531535D8ED00E5F54A /* UIKit.framework */,
 				7A0EC6551535D8ED00E5F54A /* Foundation.framework */,
 				7A0EC6571535D8ED00E5F54A /* CoreGraphics.framework */,
@@ -86,6 +93,8 @@
 				7A6BEEFB153700CF0075E2A7 /* AudioQueueTest_Production.h */,
 				7A189F851535FB5300A22149 /* AQTAppDelegate.h */,
 				7A189F861535FB5300A22149 /* AQTAppDelegate.m */,
+				3C3D270116A0284C00CEC756 /* AQTRecorder.h */,
+				3C3D270216A0284C00CEC756 /* AQTRecorder.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -209,6 +218,7 @@
 				7A189F8A1535FB5300A22149 /* AQTAppDelegate.m in Sources */,
 				7A189F931535FD5C00A22149 /* main.m in Sources */,
 				7AFC5ED4155AA37F009D92A7 /* ADVersionInfo.m in Sources */,
+				3C3D270316A0284C00CEC756 /* AQTRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +252,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
 				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -273,6 +284,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
 				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -304,6 +316,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
 				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
