@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A0EC6541535D8ED00E5F54A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6531535D8ED00E5F54A /* UIKit.framework */; };
+		7A0EC6561535D8ED00E5F54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6551535D8ED00E5F54A /* Foundation.framework */; };
+		7A0EC6581535D8ED00E5F54A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6571535D8ED00E5F54A /* CoreGraphics.framework */; };
+		7A189F8A1535FB5300A22149 /* AQTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A189F861535FB5300A22149 /* AQTAppDelegate.m */; };
+		7A189F931535FD5C00A22149 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A189F901535FD5C00A22149 /* main.m */; };
+		7AFC5ED4155AA37F009D92A7 /* ADVersionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC5ED3155AA37F009D92A7 /* ADVersionInfo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6F3B917C1589E79C00806754 /* ADSharedMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSharedMacros.h; path = Modules/ADSharedMacros.h; sourceTree = SOURCE_ROOT; };
+		7A0EC64F1535D8ED00E5F54A /* AudioQueueTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioQueueTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A0EC6531535D8ED00E5F54A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7A0EC6551535D8ED00E5F54A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A0EC6571535D8ED00E5F54A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7A189F851535FB5300A22149 /* AQTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTAppDelegate.h; sourceTree = "<group>"; };
+		7A189F861535FB5300A22149 /* AQTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTAppDelegate.m; sourceTree = "<group>"; };
+		7A189F901535FD5C00A22149 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		7A189F911535FD5C00A22149 /* AudioQueueTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AudioQueueTest-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7A189F921535FD5C00A22149 /* AudioQueueTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioQueueTest-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		7A6BEEF9153700A30075E2A7 /* AudioQueueTest_Development.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueueTest_Development.h; sourceTree = "<group>"; };
+		7A6BEEFA153700C30075E2A7 /* AudioQueueTest_Staging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueueTest_Staging.h; sourceTree = "<group>"; };
+		7A6BEEFB153700CF0075E2A7 /* AudioQueueTest_Production.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueueTest_Production.h; sourceTree = "<group>"; };
+		7ABC1627153612960039E546 /* AudioQueueTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioQueueTest.h; sourceTree = "<group>"; };
+		7AFC5ED3155AA37F009D92A7 /* ADVersionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVersionInfo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A0EC64C1535D8ED00E5F54A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A0EC6541535D8ED00E5F54A /* UIKit.framework in Frameworks */,
+				7A0EC6561535D8ED00E5F54A /* Foundation.framework in Frameworks */,
+				7A0EC6581535D8ED00E5F54A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A0EC6441535D8ED00E5F54A = {
+			isa = PBXGroup;
+			children = (
+				7A189F7F1535FB5300A22149 /* Classes */,
+				7AFC5ED1155AA37F009D92A7 /* Modules */,
+				7A189F8F1535FD0D00A22149 /* Other Sources */,
+				7A189F951535FD6800A22149 /* Resources */,
+				7A0EC6521535D8ED00E5F54A /* Frameworks */,
+				7A0EC6501535D8ED00E5F54A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A0EC6501535D8ED00E5F54A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A0EC64F1535D8ED00E5F54A /* AudioQueueTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A0EC6521535D8ED00E5F54A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A0EC6531535D8ED00E5F54A /* UIKit.framework */,
+				7A0EC6551535D8ED00E5F54A /* Foundation.framework */,
+				7A0EC6571535D8ED00E5F54A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A189F7F1535FB5300A22149 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7ABC1627153612960039E546 /* AudioQueueTest.h */,
+				7A6BEEF9153700A30075E2A7 /* AudioQueueTest_Development.h */,
+				7A6BEEFA153700C30075E2A7 /* AudioQueueTest_Staging.h */,
+				7A6BEEFB153700CF0075E2A7 /* AudioQueueTest_Production.h */,
+				7A189F851535FB5300A22149 /* AQTAppDelegate.h */,
+				7A189F861535FB5300A22149 /* AQTAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7A189F8F1535FD0D00A22149 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7A189F901535FD5C00A22149 /* main.m */,
+				7A189F921535FD5C00A22149 /* AudioQueueTest-Prefix.pch */,
+			);
+			name = "Other Sources";
+			path = AudioQueueTest;
+			sourceTree = "<group>";
+		};
+		7A189F951535FD6800A22149 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A189F911535FD5C00A22149 /* AudioQueueTest-Info.plist */,
+			);
+			name = Resources;
+			path = AudioQueueTest;
+			sourceTree = "<group>";
+		};
+		7AFC5ED1155AA37F009D92A7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6F3B917C1589E79C00806754 /* ADSharedMacros.h */,
+				7AFC5ED2155AA37F009D92A7 /* ADVersionInfo */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7AFC5ED2155AA37F009D92A7 /* ADVersionInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7AFC5ED3155AA37F009D92A7 /* ADVersionInfo.m */,
+			);
+			path = ADVersionInfo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A0EC64E1535D8ED00E5F54A /* AudioQueueTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A0EC6671535D8ED00E5F54A /* Build configuration list for PBXNativeTarget "AudioQueueTest" */;
+			buildPhases = (
+				7A0EC66A1535D91400E5F54A /* Inject git informations in Info.plist */,
+				7A0EC64B1535D8ED00E5F54A /* Sources */,
+				7A0EC64C1535D8ED00E5F54A /* Frameworks */,
+				7A0EC64D1535D8ED00E5F54A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioQueueTest;
+			productName = AudioQueueTest;
+			productReference = 7A0EC64F1535D8ED00E5F54A /* AudioQueueTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A0EC6461535D8ED00E5F54A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AQT;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 7A0EC6491535D8ED00E5F54A /* Build configuration list for PBXProject "AudioQueueTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7A0EC6441535D8ED00E5F54A;
+			productRefGroup = 7A0EC6501535D8ED00E5F54A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A0EC64E1535D8ED00E5F54A /* AudioQueueTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A0EC64D1535D8ED00E5F54A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A0EC66A1535D91400E5F54A /* Inject git informations in Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Inject git informations in Info.plist";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "GIT_COMMIT=`git rev-parse --short HEAD`\nGIT_BRANCH=`git symbolic-ref HEAD`\nGIT_STATUS=`git status --porcelain -z`\n/usr/libexec/PlistBuddy -c \"Delete :CFBundleGitCommit\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\" >/dev/null 2>&1\n/usr/libexec/PlistBuddy -c \"Delete :CFBundleGitBranch\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\" >/dev/null 2>&1\n/usr/libexec/PlistBuddy -c \"Delete :CFBundleGitStatus\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\" >/dev/null 2>&1\nif [ -n \"$GIT_COMMIT\" ]; then\n  /usr/libexec/PlistBuddy -c \"Add :CFBundleGitCommit string \\\"${GIT_COMMIT}\\\"\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\nfi\nif [ -n \"$GIT_BRANCH\" ]; then\n  /usr/libexec/PlistBuddy -c \"Add :CFBundleGitBranch string \\\"${GIT_BRANCH}\\\"\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\nfi\nif [ -n \"$GIT_STATUS\" ]; then\n  /usr/libexec/PlistBuddy -c \"Add :CFBundleGitStatus string \\\"${GIT_STATUS}\\\"\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A0EC64B1535D8ED00E5F54A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A189F8A1535FB5300A22149 /* AQTAppDelegate.m in Sources */,
+				7A189F931535FD5C00A22149 /* main.m in Sources */,
+				7AFC5ED4155AA37F009D92A7 /* ADVersionInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7A0EC6651535D8ED00E5F54A /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION=$(CONFIGURATION)";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Development;
+		};
+		7A0EC6681535D8ED00E5F54A /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
+				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Development;
+		};
+		7A6BEEF51536FD400075E2A7 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION=$(CONFIGURATION)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Staging;
+		};
+		7A6BEEF61536FD400075E2A7 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
+				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Staging;
+		};
+		7A6BEEF71536FE3D0075E2A7 /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION=$(CONFIGURATION)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
+		};
+		7A6BEEF81536FE3D0075E2A7 /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
+				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Production;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A0EC6491535D8ED00E5F54A /* Build configuration list for PBXProject "AudioQueueTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A0EC6651535D8ED00E5F54A /* Development */,
+				7A6BEEF51536FD400075E2A7 /* Staging */,
+				7A6BEEF71536FE3D0075E2A7 /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Production;
+		};
+		7A0EC6671535D8ED00E5F54A /* Build configuration list for PBXNativeTarget "AudioQueueTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A0EC6681535D8ED00E5F54A /* Development */,
+				7A6BEEF61536FD400075E2A7 /* Staging */,
+				7A6BEEF81536FE3D0075E2A7 /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Production;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A0EC6461535D8ED00E5F54A /* Project object */;
+}
