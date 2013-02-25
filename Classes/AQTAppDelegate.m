@@ -18,13 +18,6 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-
-    _recorder = [[AQTRecorder alloc] init];
-    [_recorder startRecording];
-
-    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -49,5 +42,9 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (IBAction)dismissKeyboard:(id)sender {
+    [_window.rootViewController.view endEditing:YES];
 }
 @end

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C36C80816D6944700A94ADA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36C80716D6944700A94ADA /* Accelerate.framework */; };
 		3C3D270316A0284C00CEC756 /* AQTRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D270216A0284C00CEC756 /* AQTRecorder.m */; };
 		3C3D270616A0444200CEC756 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3D270516A0444200CEC756 /* AudioToolbox.framework */; };
+		3C3D270D16A06A6700CEC756 /* AQTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D270C16A06A6700CEC756 /* AQTPlayer.m */; };
+		3C75C6C416B68E4100F85EC3 /* AQTMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C75C6C316B68E4100F85EC3 /* AQTMainWindow.xib */; };
 		7A0EC6541535D8ED00E5F54A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6531535D8ED00E5F54A /* UIKit.framework */; };
 		7A0EC6561535D8ED00E5F54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6551535D8ED00E5F54A /* Foundation.framework */; };
 		7A0EC6581535D8ED00E5F54A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6571535D8ED00E5F54A /* CoreGraphics.framework */; };
@@ -18,9 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C36C80716D6944700A94ADA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		3C3D270116A0284C00CEC756 /* AQTRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTRecorder.h; sourceTree = "<group>"; };
 		3C3D270216A0284C00CEC756 /* AQTRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTRecorder.m; sourceTree = "<group>"; };
 		3C3D270516A0444200CEC756 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3C3D270B16A06A6700CEC756 /* AQTPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTPlayer.h; sourceTree = "<group>"; };
+		3C3D270C16A06A6700CEC756 /* AQTPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTPlayer.m; sourceTree = "<group>"; };
+		3C75C6C316B68E4100F85EC3 /* AQTMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQTMainWindow.xib; sourceTree = SOURCE_ROOT; };
 		6F3B917C1589E79C00806754 /* ADSharedMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSharedMacros.h; path = Modules/ADSharedMacros.h; sourceTree = SOURCE_ROOT; };
 		7A0EC64F1535D8ED00E5F54A /* AudioQueueTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioQueueTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0EC6531535D8ED00E5F54A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C36C80816D6944700A94ADA /* Accelerate.framework in Frameworks */,
 				3C3D270616A0444200CEC756 /* AudioToolbox.framework in Frameworks */,
 				7A0EC6541535D8ED00E5F54A /* UIKit.framework in Frameworks */,
 				7A0EC6561535D8ED00E5F54A /* Foundation.framework in Frameworks */,
@@ -76,6 +84,7 @@
 		7A0EC6521535D8ED00E5F54A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C36C80716D6944700A94ADA /* Accelerate.framework */,
 				3C3D270516A0444200CEC756 /* AudioToolbox.framework */,
 				7A0EC6531535D8ED00E5F54A /* UIKit.framework */,
 				7A0EC6551535D8ED00E5F54A /* Foundation.framework */,
@@ -95,6 +104,8 @@
 				7A189F861535FB5300A22149 /* AQTAppDelegate.m */,
 				3C3D270116A0284C00CEC756 /* AQTRecorder.h */,
 				3C3D270216A0284C00CEC756 /* AQTRecorder.m */,
+				3C3D270B16A06A6700CEC756 /* AQTPlayer.h */,
+				3C3D270C16A06A6700CEC756 /* AQTPlayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -113,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				7A189F911535FD5C00A22149 /* AudioQueueTest-Info.plist */,
+				3C75C6C316B68E4100F85EC3 /* AQTMainWindow.xib */,
 			);
 			name = Resources;
 			path = AudioQueueTest;
@@ -163,7 +175,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AQT;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 7A0EC6491535D8ED00E5F54A /* Build configuration list for PBXProject "AudioQueueTest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -187,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C75C6C416B68E4100F85EC3 /* AQTMainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +232,7 @@
 				7A189F931535FD5C00A22149 /* main.m in Sources */,
 				7AFC5ED4155AA37F009D92A7 /* ADVersionInfo.m in Sources */,
 				3C3D270316A0284C00CEC756 /* AQTRecorder.m in Sources */,
+				3C3D270D16A06A6700CEC756 /* AQTPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +244,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -263,6 +281,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -295,6 +317,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

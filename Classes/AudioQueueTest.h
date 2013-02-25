@@ -13,3 +13,17 @@
 #define cat2_(x,y) cat_(x,y)
 #define ENVIRONMENT_HEADER str2_(cat2_(AudioQueueTest_, CONFIGURATION.h))
 #include ENVIRONMENT_HEADER
+
+#define kNumberBuffers 3
+
+#define SR 44100
+#define FREQ (SR*8/18)
+#define BIT_RATE (SR/36)
+#define SAMPLE_PER_BIT (SR/BIT_RATE)
+#define SAMPLE_PER_BYTE (8 * SAMPLE_PER_BIT)
+#define BARKER_LEN 13
+
+//#define SHOW_FRAMES
+//#define SHOW_CORR
+//#define SHOW_BASEBAND
+//#define SHOW_ENCODED

@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
-
-#define kNumberBuffers 3
+#include <limits.h>
+#include <Accelerate/Accelerate.h>
 
 typedef struct {
+    id mSelf;
     AudioStreamBasicDescription mDataFormat;
     AudioQueueRef mQueue;
     AudioQueueBufferRef mBuffers[kNumberBuffers];
@@ -22,6 +23,10 @@ typedef struct {
 
 @interface AQTRecorder : NSObject
 @property (nonatomic, assign) AQRecordState recordState;
+@property (retain, nonatomic) IBOutlet UIButton *recordButton;
+@property (retain, nonatomic) IBOutlet UITextView *receiverTextView;
+- (IBAction)recordMessage:(id)sender;
 - (void)startRecording;
 - (void)stopRecording;
+- (void)updateTextView;
 @end

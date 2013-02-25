@@ -1,4 +1,4 @@
-@interface ADVersionInfo
+@interface ADVersionInfo : NSObject 
 @end
 
 @implementation ADVersionInfo
