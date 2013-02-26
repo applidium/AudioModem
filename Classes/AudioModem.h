@@ -22,6 +22,7 @@
 #define SAMPLE_PER_BIT (SR/BIT_RATE)
 #define SAMPLE_PER_BYTE (8 * SAMPLE_PER_BIT)
 #define BARKER_LEN 13
+#define CORR_MAX_COEFF 0.9
 
 //#define SHOW_FRAMES
 //#define SHOW_CORR

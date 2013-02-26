@@ -97,6 +97,8 @@
 							<int key="IBUIContentHorizontalAlignment">0</int>
 							<int key="IBUIContentVerticalAlignment">0</int>
 							<int key="IBUIButtonType">1</int>
+							<string key="IBUIHighlightedTitle">Playing</string>
+							<string key="IBUISelectedTitle">Playing</string>
 							<string key="IBUINormalTitle">Play</string>
 							<object class="NSColor" key="IBUIHighlightedTitleColor" id="106457403">
 								<int key="NSColorSpace">3</int>
@@ -302,6 +304,14 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">recordButton</string>
+						<reference key="source" ref="612542479"/>
+						<reference key="destination" ref="1039190161"/>
+					</object>
+					<int key="connectionID">23</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">recordButton</string>
 						<reference key="source" ref="215005909"/>
 						<reference key="destination" ref="1039190161"/>
 					</object>
@@ -314,6 +324,14 @@
 						<reference key="destination" ref="799487777"/>
 					</object>
 					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">playButton</string>
+						<reference key="source" ref="215005909"/>
+						<reference key="destination" ref="720839814"/>
+					</object>
+					<int key="connectionID">24</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -416,12 +434,13 @@
 				<string key="7.CustomClassName">UIControl</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="9.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">24</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -472,6 +491,7 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="messageTextView">UITextView</string>
 						<string key="playButton">UIButton</string>
+						<string key="recordButton">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="messageTextView">
@@ -480,6 +500,10 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="playButton">
 							<string key="name">playButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="recordButton">
+							<string key="name">recordButton</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>
@@ -503,10 +527,15 @@
 						</object>
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="playButton">UIButton</string>
 						<string key="receiverTextView">UITextView</string>
 						<string key="recordButton">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="playButton">
+							<string key="name">playButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="receiverTextView">
 							<string key="name">receiverTextView</string>
 							<string key="candidateClassName">UITextView</string>

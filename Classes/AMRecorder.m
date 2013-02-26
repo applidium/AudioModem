@@ -16,7 +16,7 @@ static const bool ParityTable256[256] =
     P6(0), P6(1), P6(1), P6(0)
 };
 
-static float bpf[SR/BIT_RATE+1] = {
+static float bpf[SAMPLE_PER_BIT+1] = {
     +0.0055491, -0.0060955, +0.0066066, -0.0061506, +0.0033972, +0.0028618,
     -0.0130922, +0.0265188, -0.0409498, +0.0530505, -0.0590496, +0.0557252,
     -0.0414030, +0.0166718, +0.0154256, -0.0498328, +0.0804827, -0.1016295,
@@ -26,7 +26,7 @@ static float bpf[SR/BIT_RATE+1] = {
     +0.0055491
 };
 
-static float lpf[SR/BIT_RATE+1] = {
+static float lpf[SAMPLE_PER_BIT+1] = {
     0.0025649, 0.0029793, 0.0039200, 0.0054457, 0.0075875, 0.0103454,
     0.0136865, 0.0175452, 0.0218251, 0.0264022, 0.0311308, 0.0358496,
     0.0403893, 0.0445807, 0.0482632, 0.0512926, 0.0535482, 0.0549392,
@@ -84,6 +84,7 @@ void HandleInputBuffer(void * inUserData,
 
     short * samples = (short *)inBuffer->mAudioData;
     long nsamples = sampleEnd - sampleStart + 1;
+    bool found = NO;
 
     // Convert to float
     for (long i = 0; i < nsamples; i++) {
@@ -91,43 +92,60 @@ void HandleInputBuffer(void * inUserData,
     }
 
     // BPF
-    vDSP_desamp(fBuffer, 1, bpf, fBuffer, nsamples, SR/BIT_RATE+1);
+    vDSP_desamp(fBuffer, 1, bpf, fBuffer, nsamples, SAMPLE_PER_BIT+1);
 
     // Carrier present ?
-    float m = 1.0f;
-    vDSP_meamgv(fBuffer, 1, &m, nsamples);
-    printf("mean %1.9f\n", m);
-    m = 1.0f;
-    vDSP_maxmgv(fBuffer, 1, &m, nsamples);
-    printf("max  %1.9f\n", m);
+    float m = 1.0f, max = 0.0f, mean = 0.0f;
+    vDSP_meamgv(fBuffer, 1, &mean, nsamples);
+    printf("mean %1.9f\n", mean);
+
+if (mean > 10e-5) {
+
+    max = mean;
+    vDSP_maxmgv(fBuffer, 1, &max, nsamples);
+    printf("max  %1.9f\n", max);
+    printf("max/mean %1.9f\n", max/mean);
+
 
     // Delay Multiply
     vDSP_vmul(fBuffer, 1, fBuffer+SAMPLE_PER_BIT, 1, fBuffer, 1, nsamples-SAMPLE_PER_BIT);
 
     // LPF
-    vDSP_desamp(fBuffer, 1, lpf, fBuffer, nsamples, SR/BIT_RATE+1);
+    vDSP_desamp(fBuffer, 1, lpf, fBuffer, nsamples, SAMPLE_PER_BIT+1);
 
     // Time sync
-    m = 1/m;
+    m = 1/max;
     vDSP_vsmul(barker, 1, &m, barker, 1, BARKER_LEN*SAMPLE_PER_BIT);
 
-    vDSP_conv(fBuffer, 1, barker, 1, corr, 1, nsamples, BARKER_LEN*SAMPLE_PER_BIT);
+#define FILTERS_DELAY (BARKER_LEN+2)*SAMPLE_PER_BIT
+    vDSP_conv(fBuffer, 1, barker, 1, corr, 1, nsamples-FILTERS_DELAY, BARKER_LEN*SAMPLE_PER_BIT);
 
-    float cc = -1.0f;
-    unsigned long cci = 0;
-    vDSP_vsmul(corr, 1, &cc, corr, 1, nsamples);
-    vDSP_maxv(corr, 1, &cc, nsamples);
-    cc *= 0.98;
-    vDSP_vthrsc(corr, 1, &cc, &cc, corr, 1, nsamples);
-    vDSP_maxvi(corr, 1, &cc, &cci, nsamples);
-    printf("corr %1.9f\n", cc);
-    printf("idx  %lu\n", cci);
 
 #ifdef SHOW_CORR
-    for (long i = 0; i < nsamples; i++) {
+    for (long i = 0; i < nsamples-FILTERS_DELAY; i++) {
         printf("%+1.8f\n", corr[i]);
     }
 #endif
+
+    float cc = -1.0f;
+    unsigned long cci = 0;
+    vDSP_vsmul(corr, 1, &cc, corr, 1, nsamples-FILTERS_DELAY);
+    vDSP_maxv(corr, 1, &cc, nsamples-FILTERS_DELAY);
+    cc *= CORR_MAX_COEFF;
+    vDSP_vthrsc(corr, 1, &cc, &cc, corr, 1, nsamples-FILTERS_DELAY);
+    vDSP_maxvi(corr, 1, &cc, &cci, nsamples-FILTERS_DELAY);
+    printf("corr %1.9f\n", cc);
+    printf("idx  %lu\n", cci);
+
+    long j = -1;
+    for (long i = 0; i < nsamples; i++) {
+        if (corr[i] > 0) {
+            if (j != i-1) {
+                printf("Found frame starting at index %ld\n", i);
+            }
+            j = i;
+        }
+    }
 
     // Integration
     for (long i = 0; i < nsamples/SAMPLE_PER_BIT; i++) {
@@ -168,6 +186,20 @@ void HandleInputBuffer(void * inUserData,
     }
     printf("\n%d characters decoded\n", (i-13)/12);
     strbuf[(i-13)/12] = '\0';
+} else {
+    strbuf[0] = '(';
+    strbuf[1] = 'N';
+    strbuf[2] = 'o';
+    strbuf[3] = ' ';
+    strbuf[4] = 's';
+    strbuf[5] = 'i';
+    strbuf[6] = 'g';
+    strbuf[7] = 'n';
+    strbuf[8] = 'a';
+    strbuf[9] = 'l';
+    strbuf[10] = ')';
+    strbuf[11] = '\0';
+}
 
     [(AMRecorder *)pRecordState->mSelf performSelectorOnMainThread:@selector(updateTextView) withObject:nil waitUntilDone:NO];
 
@@ -178,8 +210,7 @@ void HandleInputBuffer(void * inUserData,
     AudioQueueEnqueueBuffer(pRecordState->mQueue, inBuffer, 0, NULL);
 
     if (pRecordState->mIsRunning) {
-        AudioQueueStop(pRecordState->mQueue, true);
-        pRecordState->mIsRunning = false;
+        [(AMRecorder *)pRecordState->mSelf stopRecording];
     }
 }
 
@@ -193,6 +224,7 @@ void HandleInputBuffer(void * inUserData,
     AudioQueueDispose(_recordState.mQueue, true);
     [_recordButton release];
     [_receiverTextView release];
+    [_playButton release];
     [super dealloc];
 }
 
@@ -226,6 +258,8 @@ void HandleInputBuffer(void * inUserData,
     status = AudioQueueStart(_recordState.mQueue, NULL);
 
     ADAssert(noErr == status, @"Could not start recording.");
+
+    _receiverTextView.text = @"(Recording...)";
 }
 
 - (void)stopRecording {
@@ -233,6 +267,7 @@ void HandleInputBuffer(void * inUserData,
         AudioQueueStop(_recordState.mQueue, true);
         _recordState.mIsRunning = false;
         _recordButton.enabled = YES;
+        _playButton.enabled = YES;
     }
 }
 
@@ -242,7 +277,8 @@ void HandleInputBuffer(void * inUserData,
 
 - (IBAction)recordMessage:(id)sender {
     [self startRecording];
-    //_recordButton.enabled = NO;
+    _playButton.enabled = NO;
+    _recordButton.enabled = NO;
 }
 @end
 

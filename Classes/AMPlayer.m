@@ -18,7 +18,6 @@ static const unsigned char ParityTable256[256] =
 
 static unsigned char barkerbin[BARKER_LEN] = {
     0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0
-    //1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1
 };
 
 void HandleOutputBuffer(void * inUserData,
@@ -64,6 +63,7 @@ void HandleOutputBuffer(void * inUserData,
     AudioQueueDispose(_playState.mQueue, true);
     [_messageTextView release];
     [_playButton release];
+    [_recordButton release];
     [super dealloc];
 }
 
@@ -71,11 +71,13 @@ void HandleOutputBuffer(void * inUserData,
     if (_playState.mIsRunning) {
         AudioQueueStop(_playState.mQueue, true);
         _playState.mIsRunning = false;
-        [_playButton setTitle:@"Play" forState:UIControlStateNormal];
+        _playButton.selected = NO;
+        _recordButton.enabled = YES;
     } else {
         printf("playing : \"%s\"\n", [_messageTextView.text cStringUsingEncoding:NSASCIIStringEncoding]);
         [self play:_messageTextView.text];
-        [_playButton setTitle:@"Playing" forState:UIControlStateNormal];
+        _playButton.selected = YES;
+        _recordButton.enabled = NO;
     }
 }
 

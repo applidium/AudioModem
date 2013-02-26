@@ -27,6 +27,7 @@ typedef struct {
 
 @interface AMPlayer : NSObject
 @property (nonatomic, assign) AQPlayState playState;
+@property (retain, nonatomic) IBOutlet UIButton *recordButton;
 @property (retain, nonatomic) IBOutlet UIButton *playButton;
 @property (retain, nonatomic) IBOutlet UITextView *messageTextView;
 - (IBAction)playMessage:(id)sender;

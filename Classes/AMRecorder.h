@@ -23,6 +23,7 @@ typedef struct {
 
 @interface AMRecorder : NSObject
 @property (nonatomic, assign) AQRecordState recordState;
+@property (retain, nonatomic) IBOutlet UIButton *playButton;
 @property (retain, nonatomic) IBOutlet UIButton *recordButton;
 @property (retain, nonatomic) IBOutlet UITextView *receiverTextView;
 - (IBAction)recordMessage:(id)sender;
