@@ -8,40 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		3C36C80816D6944700A94ADA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36C80716D6944700A94ADA /* Accelerate.framework */; };
-		3C3D270316A0284C00CEC756 /* AQTRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D270216A0284C00CEC756 /* AQTRecorder.m */; };
+		3C3D270316A0284C00CEC756 /* AMRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D270216A0284C00CEC756 /* AMRecorder.m */; };
 		3C3D270616A0444200CEC756 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3D270516A0444200CEC756 /* AudioToolbox.framework */; };
-		3C3D270D16A06A6700CEC756 /* AQTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D270C16A06A6700CEC756 /* AQTPlayer.m */; };
-		3C75C6C416B68E4100F85EC3 /* AQTMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C75C6C316B68E4100F85EC3 /* AQTMainWindow.xib */; };
+		3C3D270D16A06A6700CEC756 /* AMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D270C16A06A6700CEC756 /* AMPlayer.m */; };
+		3C75C6C416B68E4100F85EC3 /* AMMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C75C6C316B68E4100F85EC3 /* AMMainWindow.xib */; };
 		7A0EC6541535D8ED00E5F54A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6531535D8ED00E5F54A /* UIKit.framework */; };
 		7A0EC6561535D8ED00E5F54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6551535D8ED00E5F54A /* Foundation.framework */; };
 		7A0EC6581535D8ED00E5F54A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0EC6571535D8ED00E5F54A /* CoreGraphics.framework */; };
-		7A189F8A1535FB5300A22149 /* AQTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A189F861535FB5300A22149 /* AQTAppDelegate.m */; };
+		7A189F8A1535FB5300A22149 /* AMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A189F861535FB5300A22149 /* AMAppDelegate.m */; };
 		7A189F931535FD5C00A22149 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A189F901535FD5C00A22149 /* main.m */; };
 		7AFC5ED4155AA37F009D92A7 /* ADVersionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC5ED3155AA37F009D92A7 /* ADVersionInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C36C80716D6944700A94ADA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		3C3D270116A0284C00CEC756 /* AQTRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTRecorder.h; sourceTree = "<group>"; };
-		3C3D270216A0284C00CEC756 /* AQTRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTRecorder.m; sourceTree = "<group>"; };
+		3C3CAE8F16DCC30400B5E98C /* AudioModem-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AudioModem-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3C3CAE9016DCC30400B5E98C /* AudioModem-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioModem-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		3C3D270116A0284C00CEC756 /* AMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRecorder.h; sourceTree = "<group>"; };
+		3C3D270216A0284C00CEC756 /* AMRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMRecorder.m; sourceTree = "<group>"; };
 		3C3D270516A0444200CEC756 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		3C3D270B16A06A6700CEC756 /* AQTPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTPlayer.h; sourceTree = "<group>"; };
-		3C3D270C16A06A6700CEC756 /* AQTPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTPlayer.m; sourceTree = "<group>"; };
-		3C75C6C316B68E4100F85EC3 /* AQTMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AQTMainWindow.xib; sourceTree = SOURCE_ROOT; };
+		3C3D270B16A06A6700CEC756 /* AMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPlayer.h; sourceTree = "<group>"; };
+		3C3D270C16A06A6700CEC756 /* AMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPlayer.m; sourceTree = "<group>"; };
+		3C75C6C316B68E4100F85EC3 /* AMMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMMainWindow.xib; sourceTree = SOURCE_ROOT; };
 		6F3B917C1589E79C00806754 /* ADSharedMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADSharedMacros.h; path = Modules/ADSharedMacros.h; sourceTree = SOURCE_ROOT; };
-		7A0EC64F1535D8ED00E5F54A /* AudioQueueTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioQueueTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A0EC64F1535D8ED00E5F54A /* AudioModem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioModem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0EC6531535D8ED00E5F54A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A0EC6551535D8ED00E5F54A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7A0EC6571535D8ED00E5F54A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7A189F851535FB5300A22149 /* AQTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTAppDelegate.h; sourceTree = "<group>"; };
-		7A189F861535FB5300A22149 /* AQTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTAppDelegate.m; sourceTree = "<group>"; };
+		7A189F851535FB5300A22149 /* AMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMAppDelegate.h; sourceTree = "<group>"; };
+		7A189F861535FB5300A22149 /* AMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMAppDelegate.m; sourceTree = "<group>"; };
 		7A189F901535FD5C00A22149 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
-		7A189F911535FD5C00A22149 /* AudioQueueTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AudioQueueTest-Info.plist"; sourceTree = SOURCE_ROOT; };
-		7A189F921535FD5C00A22149 /* AudioQueueTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioQueueTest-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		7A6BEEF9153700A30075E2A7 /* AudioQueueTest_Development.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueueTest_Development.h; sourceTree = "<group>"; };
-		7A6BEEFA153700C30075E2A7 /* AudioQueueTest_Staging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueueTest_Staging.h; sourceTree = "<group>"; };
-		7A6BEEFB153700CF0075E2A7 /* AudioQueueTest_Production.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueueTest_Production.h; sourceTree = "<group>"; };
-		7ABC1627153612960039E546 /* AudioQueueTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioQueueTest.h; sourceTree = "<group>"; };
+		7A6BEEF9153700A30075E2A7 /* AudioModem_Development.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioModem_Development.h; sourceTree = "<group>"; };
+		7A6BEEFA153700C30075E2A7 /* AudioModem_Staging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioModem_Staging.h; sourceTree = "<group>"; };
+		7A6BEEFB153700CF0075E2A7 /* AudioModem_Production.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioModem_Production.h; sourceTree = "<group>"; };
+		7ABC1627153612960039E546 /* AudioModem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioModem.h; sourceTree = "<group>"; };
 		7AFC5ED3155AA37F009D92A7 /* ADVersionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADVersionInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +76,7 @@
 		7A0EC6501535D8ED00E5F54A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7A0EC64F1535D8ED00E5F54A /* AudioQueueTest.app */,
+				7A0EC64F1535D8ED00E5F54A /* AudioModem.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,16 +96,16 @@
 		7A189F7F1535FB5300A22149 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7ABC1627153612960039E546 /* AudioQueueTest.h */,
-				7A6BEEF9153700A30075E2A7 /* AudioQueueTest_Development.h */,
-				7A6BEEFA153700C30075E2A7 /* AudioQueueTest_Staging.h */,
-				7A6BEEFB153700CF0075E2A7 /* AudioQueueTest_Production.h */,
-				7A189F851535FB5300A22149 /* AQTAppDelegate.h */,
-				7A189F861535FB5300A22149 /* AQTAppDelegate.m */,
-				3C3D270116A0284C00CEC756 /* AQTRecorder.h */,
-				3C3D270216A0284C00CEC756 /* AQTRecorder.m */,
-				3C3D270B16A06A6700CEC756 /* AQTPlayer.h */,
-				3C3D270C16A06A6700CEC756 /* AQTPlayer.m */,
+				7ABC1627153612960039E546 /* AudioModem.h */,
+				7A6BEEF9153700A30075E2A7 /* AudioModem_Development.h */,
+				7A6BEEFA153700C30075E2A7 /* AudioModem_Staging.h */,
+				7A6BEEFB153700CF0075E2A7 /* AudioModem_Production.h */,
+				7A189F851535FB5300A22149 /* AMAppDelegate.h */,
+				7A189F861535FB5300A22149 /* AMAppDelegate.m */,
+				3C3D270116A0284C00CEC756 /* AMRecorder.h */,
+				3C3D270216A0284C00CEC756 /* AMRecorder.m */,
+				3C3D270B16A06A6700CEC756 /* AMPlayer.h */,
+				3C3D270C16A06A6700CEC756 /* AMPlayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				7A189F901535FD5C00A22149 /* main.m */,
-				7A189F921535FD5C00A22149 /* AudioQueueTest-Prefix.pch */,
+				3C3CAE9016DCC30400B5E98C /* AudioModem-Prefix.pch */,
 			);
 			name = "Other Sources";
 			path = AudioQueueTest;
@@ -123,8 +123,8 @@
 		7A189F951535FD6800A22149 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7A189F911535FD5C00A22149 /* AudioQueueTest-Info.plist */,
-				3C75C6C316B68E4100F85EC3 /* AQTMainWindow.xib */,
+				3C3CAE8F16DCC30400B5E98C /* AudioModem-Info.plist */,
+				3C75C6C316B68E4100F85EC3 /* AMMainWindow.xib */,
 			);
 			name = Resources;
 			path = AudioQueueTest;
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7A0EC64E1535D8ED00E5F54A /* AudioQueueTest */ = {
+		7A0EC64E1535D8ED00E5F54A /* AudioModem */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A0EC6671535D8ED00E5F54A /* Build configuration list for PBXNativeTarget "AudioQueueTest" */;
+			buildConfigurationList = 7A0EC6671535D8ED00E5F54A /* Build configuration list for PBXNativeTarget "AudioModem" */;
 			buildPhases = (
 				7A0EC66A1535D91400E5F54A /* Inject git informations in Info.plist */,
 				7A0EC64B1535D8ED00E5F54A /* Sources */,
@@ -163,9 +163,9 @@
 			);
 			dependencies = (
 			);
-			name = AudioQueueTest;
+			name = AudioModem;
 			productName = AudioQueueTest;
-			productReference = 7A0EC64F1535D8ED00E5F54A /* AudioQueueTest.app */;
+			productReference = 7A0EC64F1535D8ED00E5F54A /* AudioModem.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -174,10 +174,10 @@
 		7A0EC6461535D8ED00E5F54A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = AQT;
+				CLASSPREFIX = AM;
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = 7A0EC6491535D8ED00E5F54A /* Build configuration list for PBXProject "AudioQueueTest" */;
+			buildConfigurationList = 7A0EC6491535D8ED00E5F54A /* Build configuration list for PBXProject "AudioModem" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -189,7 +189,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A0EC64E1535D8ED00E5F54A /* AudioQueueTest */,
+				7A0EC64E1535D8ED00E5F54A /* AudioModem */,
 			);
 		};
 /* End PBXProject section */
@@ -199,7 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C75C6C416B68E4100F85EC3 /* AQTMainWindow.xib in Resources */,
+				3C75C6C416B68E4100F85EC3 /* AMMainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,11 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A189F8A1535FB5300A22149 /* AQTAppDelegate.m in Sources */,
+				7A189F8A1535FB5300A22149 /* AMAppDelegate.m in Sources */,
 				7A189F931535FD5C00A22149 /* main.m in Sources */,
 				7AFC5ED4155AA37F009D92A7 /* ADVersionInfo.m in Sources */,
-				3C3D270316A0284C00CEC756 /* AQTRecorder.m in Sources */,
-				3C3D270D16A06A6700CEC756 /* AQTPlayer.m in Sources */,
+				3C3D270316A0284C00CEC756 /* AMRecorder.m in Sources */,
+				3C3D270D16A06A6700CEC756 /* AMPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +268,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
-				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "AudioModem-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AudioModem-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = AudioModem;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Development;
@@ -304,10 +304,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
-				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "AudioModem-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AudioModem-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = AudioModem;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Staging;
@@ -340,10 +340,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AudioQueueTest-Prefix.pch";
-				INFOPLIST_FILE = "AudioQueueTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "AudioModem-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/AudioModem-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = AudioModem;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Production;
@@ -351,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7A0EC6491535D8ED00E5F54A /* Build configuration list for PBXProject "AudioQueueTest" */ = {
+		7A0EC6491535D8ED00E5F54A /* Build configuration list for PBXProject "AudioModem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A0EC6651535D8ED00E5F54A /* Development */,
@@ -361,7 +361,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Production;
 		};
-		7A0EC6671535D8ED00E5F54A /* Build configuration list for PBXNativeTarget "AudioQueueTest" */ = {
+		7A0EC6671535D8ED00E5F54A /* Build configuration list for PBXNativeTarget "AudioModem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A0EC6681535D8ED00E5F54A /* Development */,

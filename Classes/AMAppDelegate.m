@@ -1,15 +1,15 @@
 //
-//  AQTAppDelegate.m
-//  AudioQueueTest
+//  AMAppDelegate.m
+//  AudioModem
 //
 //  Created by Tarek Belkahia on 11/01/13.
 //  Copyright (c) 2013 Applidium. All rights reserved.
 //
 
-#import "AQTAppDelegate.h"
+#import "AMAppDelegate.h"
 #import "ADSharedMacros.h"
 
-@implementation AQTAppDelegate
+@implementation AMAppDelegate
 @synthesize window = _window;
 
 - (void)dealloc {

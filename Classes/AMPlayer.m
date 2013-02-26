@@ -1,12 +1,12 @@
 //
-//  AQTPlayer.m
-//  AudioQueueTest
+//  AMPlayer.m
+//  AudioModem
 //
 //  Created by Tarek Belkahia on 11/01/13.
 //
 //
 
-#import "AQTPlayer.h"
+#import "AMPlayer.h"
 
 static const unsigned char ParityTable256[256] =
 {
@@ -53,13 +53,13 @@ void HandleOutputBuffer(void * inUserData,
     pPlayState->mCurrentPacket += numPackets;
 }
 
-@interface AQTPlayer (Private)
+@interface AMPlayer (Private)
 - (void)_setupAudioFormat;
 - (void)_deriveBufferSize:(Float64)seconds;
 - (void)_encodeMessage:(NSString *)message;
 @end
 
-@implementation AQTPlayer
+@implementation AMPlayer
 - (void)dealloc {
     AudioQueueDispose(_playState.mQueue, true);
     [_messageTextView release];
@@ -114,7 +114,7 @@ void HandleOutputBuffer(void * inUserData,
 
 @end
 
-@implementation AQTPlayer (Private)
+@implementation AMPlayer (Private)
 - (void)_setupAudioFormat {
     _playState.mDataFormat.mFormatID = kAudioFormatLinearPCM;
     _playState.mDataFormat.mSampleRate = 44100.0f;

@@ -1,6 +1,6 @@
 //
-//  AQTRecorder.h
-//  AudioQueueTest
+//  AMRecorder.h
+//  AudioModem
 //
 //  Created by Tarek Belkahia on 11/01/13.
 //
@@ -21,7 +21,7 @@ typedef struct {
     bool mIsRunning;
 } AQRecordState;
 
-@interface AQTRecorder : NSObject
+@interface AMRecorder : NSObject
 @property (nonatomic, assign) AQRecordState recordState;
 @property (retain, nonatomic) IBOutlet UIButton *recordButton;
 @property (retain, nonatomic) IBOutlet UITextView *receiverTextView;

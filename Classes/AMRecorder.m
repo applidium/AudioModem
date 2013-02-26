@@ -1,12 +1,12 @@
 //
-//  AQTRecorder.m
-//  AudioQueueTest
+//  AMRecorder.m
+//  AudioModem
 //
 //  Created by Tarek Belkahia on 11/01/13.
 //
 //
 
-#import "AQTRecorder.h"
+#import "AMRecorder.h"
 
 static const bool ParityTable256[256] =
 {
@@ -169,7 +169,7 @@ void HandleInputBuffer(void * inUserData,
     printf("\n%d characters decoded\n", (i-13)/12);
     strbuf[(i-13)/12] = '\0';
 
-    [(AQTRecorder *)pRecordState->mSelf performSelectorOnMainThread:@selector(updateTextView) withObject:nil waitUntilDone:NO];
+    [(AMRecorder *)pRecordState->mSelf performSelectorOnMainThread:@selector(updateTextView) withObject:nil waitUntilDone:NO];
 
     // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -183,12 +183,12 @@ void HandleInputBuffer(void * inUserData,
     }
 }
 
-@interface AQTRecorder (Private)
+@interface AMRecorder (Private)
 - (void)_setupAudioFormat;
 - (void)_deriveBufferSize:(Float64)seconds;
 @end
 
-@implementation AQTRecorder
+@implementation AMRecorder
 - (void)dealloc {
     AudioQueueDispose(_recordState.mQueue, true);
     [_recordButton release];
@@ -246,7 +246,7 @@ void HandleInputBuffer(void * inUserData,
 }
 @end
 
-@implementation AQTRecorder (Private)
+@implementation AMRecorder (Private)
 - (void)_setupAudioFormat {
     _recordState.mDataFormat.mFormatID = kAudioFormatLinearPCM;
     _recordState.mDataFormat.mSampleRate = 44100.0f;

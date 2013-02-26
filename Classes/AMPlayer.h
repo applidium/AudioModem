@@ -1,6 +1,6 @@
 //
-//  AQTPlayer.h
-//  AudioQueueTest
+//  AMPlayer.h
+//  AudioModem
 //
 //  Created by Tarek Belkahia on 11/01/13.
 //
@@ -25,7 +25,7 @@ typedef struct {
     id mSelf;
 } AQPlayState;
 
-@interface AQTPlayer : NSObject
+@interface AMPlayer : NSObject
 @property (nonatomic, assign) AQPlayState playState;
 @property (retain, nonatomic) IBOutlet UIButton *playButton;
 @property (retain, nonatomic) IBOutlet UITextView *messageTextView;
