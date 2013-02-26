@@ -117,7 +117,7 @@ void HandleInputBuffer(void * inUserData,
     unsigned long cci = 0;
     vDSP_vsmul(corr, 1, &cc, corr, 1, nsamples);
     vDSP_maxv(corr, 1, &cc, nsamples);
-    cc *= 0.99;
+    cc *= 0.98;
     vDSP_vthrsc(corr, 1, &cc, &cc, corr, 1, nsamples);
     vDSP_maxvi(corr, 1, &cc, &cci, nsamples);
     printf("corr %1.9f\n", cc);
